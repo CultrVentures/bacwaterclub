@@ -21,11 +21,13 @@ export default function PrivacyPolicyPage() {
             <Link href="/">Return to the store</Link>
           </Button>
 
-          <Card className="bg-white/84">
-            <CardHeader>
-              <CardTitle className="serif-heading text-5xl">Privacy Policy</CardTitle>
+          <Card className="bg-white/90">
+            <CardHeader className="px-8 pt-8">
+              <CardTitle className="serif-heading text-4xl text-foreground sm:text-5xl">
+                Privacy Policy
+              </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6 text-sm leading-7 text-muted-foreground">
+            <CardContent className="space-y-6 px-8 pb-8 text-sm leading-7 text-muted-foreground sm:text-[0.9375rem]">
               <p>
                 Bacwaterclub collects the information you provide at checkout — name, shipping
                 address, email, and payment details — solely to fulfill your order and communicate

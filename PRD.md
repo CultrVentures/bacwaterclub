@@ -646,11 +646,11 @@ A refined clinical-editorial aesthetic balancing premium brand presence with ins
 
 ## Color Palette
 
-* Deep green: `#2B4542`
-* Cream: `#F7F6E8`
-* Light green accent: `#D7F3DC`
-* Dark text: `#1D2B2A`
-* Muted border / secondary tones: green-gray variants
+* Medical blue: `#1E4FA6`
+* Cool white: `#F6F9FC`
+* Cool cyan accent: `#CFE6F7`
+* Navy-charcoal text: `#0F1E33`
+* Muted border / secondary tones: slate-blue variants
 
 ## Typography Direction
 
@@ -715,7 +715,6 @@ CTA group for Request Pricing / Download Product Insert.
 
 Inline badge row such as:
 
-* Rx Only
 * U.S. HCP Audience
 * Product Insert Available
 * 30 mL Multiple-Dose Vial

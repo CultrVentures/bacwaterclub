@@ -21,11 +21,13 @@ export default function TermsPage() {
             <Link href="/">Return to the store</Link>
           </Button>
 
-          <Card className="bg-white/84">
-            <CardHeader>
-              <CardTitle className="serif-heading text-5xl">Terms</CardTitle>
+          <Card className="bg-white/90">
+            <CardHeader className="px-8 pt-8">
+              <CardTitle className="serif-heading text-4xl text-foreground sm:text-5xl">
+                Terms
+              </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6 text-sm leading-7 text-muted-foreground">
+            <CardContent className="space-y-6 px-8 pb-8 text-sm leading-7 text-muted-foreground sm:text-[0.9375rem]">
               <p>
                 Products sold on Bacwaterclub.com are for research and laboratory use only. They
                 are not drug products and are not intended for use in humans or animals. By placing

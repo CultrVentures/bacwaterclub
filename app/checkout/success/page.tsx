@@ -59,14 +59,14 @@ export default async function CheckoutSuccessPage({
       <SiteHeader />
       <main id="main-content" className="section-spacing">
         <div className="container-shell max-w-2xl">
-          <div className="rounded-[var(--radius-lg)] border border-border/60 bg-white/80 p-10 shadow-[var(--shadow-card)]">
-            <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
+          <div className="rounded-[var(--radius-lg)] border border-border/60 bg-white/90 p-10 shadow-[var(--shadow-card)] sm:p-12">
+            <p className="text-xs uppercase tracking-[0.22em] text-primary">
               Order confirmed
             </p>
-            <h1 className="serif-heading mt-3 text-4xl text-foreground">
+            <h1 className="serif-heading mt-4 text-4xl text-foreground sm:text-[2.75rem]">
               Thanks — your order is on its way.
             </h1>
-            <p className="mt-4 text-base leading-7 text-muted-foreground">
+            <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
               We&rsquo;ve received your payment and a confirmation email is heading to your inbox. Most
               orders ship within one business day in padded, foam-lined packaging.
             </p>

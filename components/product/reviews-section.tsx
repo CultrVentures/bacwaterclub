@@ -6,18 +6,18 @@ export function ReviewsSection() {
   const summary = PRODUCT.reviewsSummary;
 
   return (
-    <section id="reviews" className="section-spacing bg-white/40">
+    <section id="reviews" className="section-spacing bg-white/50">
       <div className="container-shell">
-        <div className="flex flex-col items-start gap-4 text-left sm:flex-row sm:items-end sm:justify-between">
+        <div className="flex flex-col items-start gap-5 text-left sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
+            <p className="text-xs uppercase tracking-[0.22em] text-primary">
               Customer reviews
             </p>
-            <h2 className="serif-heading mt-3 text-3xl text-foreground sm:text-4xl">
+            <h2 className="serif-heading mt-4 text-3xl text-foreground sm:text-4xl lg:text-[2.75rem]">
               Trusted by researchers, hobbyists, and compounders.
             </h2>
           </div>
-          <div className="flex items-center gap-3 rounded-full border border-border/60 bg-white/80 px-5 py-3 text-sm shadow-[var(--shadow-soft)]">
+          <div className="flex items-center gap-3 rounded-full border border-border/60 bg-white/85 px-5 py-3 text-sm shadow-[var(--shadow-soft)]">
             <div className="flex items-center gap-1 text-[#b8860b]" aria-hidden="true">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} className="h-4 w-4 fill-current" />
@@ -30,11 +30,11 @@ export function ReviewsSection() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {PRODUCT.reviews.map((review) => (
             <article
               key={review.author + review.title}
-              className="flex flex-col gap-4 rounded-[var(--radius-lg)] border border-border/60 bg-white/80 p-6 shadow-[var(--shadow-soft)]"
+              className="flex flex-col gap-4 rounded-[var(--radius-lg)] border border-border/60 bg-white/85 p-7 shadow-[var(--shadow-soft)]"
             >
               <div className="flex items-center gap-1 text-[#b8860b]" aria-label={`${review.rating} out of 5`}>
                 {Array.from({ length: review.rating }).map((_, i) => (

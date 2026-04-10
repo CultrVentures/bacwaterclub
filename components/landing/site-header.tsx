@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
@@ -16,15 +16,15 @@ export function SiteHeader() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/50 bg-background/88 backdrop-blur-xl">
-      <div className="container-shell py-4">
+    <header className="sticky top-0 z-40 border-b border-border/50 bg-background/90 backdrop-blur-xl">
+      <div className="container-shell py-5">
         <div className="flex items-center justify-between gap-6">
           <Link
             href="/"
             className="focus-outline flex items-center gap-3 rounded-full px-1 py-1"
             aria-label="Bacwaterclub home"
           >
-            <div className="flex size-11 items-center justify-center rounded-full border border-primary/20 bg-white/70 text-sm font-semibold text-primary">
+            <div className="flex size-11 items-center justify-center rounded-full border border-primary/20 bg-white/85 text-sm font-semibold text-primary">
               BW
             </div>
             <div>
@@ -48,8 +48,14 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Button asChild size="lg" className="shrink-0">
-              <a href="#buy">Shop now</a>
+            <Button
+              asChild
+              size="lg"
+              className="shrink-0 bg-[#1e4fa6] text-[#ffffff] hover:bg-[#173d80]"
+            >
+              <a href="#buy" style={{ color: "#ffffff" }}>
+                Shop now
+              </a>
             </Button>
             <Button
               type="button"
@@ -78,7 +84,7 @@ export function SiteHeader() {
               <a
                 key={item.href}
                 href={item.href}
-                className="focus-outline rounded-2xl border border-border/70 bg-white/70 px-4 py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="focus-outline rounded-2xl border border-border/60 bg-white/85 px-4 py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
                 onClick={() => {
                   setMobileNavOpen(false);
                 }}

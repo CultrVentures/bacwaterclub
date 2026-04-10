@@ -29,11 +29,12 @@ The landing page must feel premium, restrained, and trustworthy. It should suppo
 ## 3. Visual Identity
 
 ### Color palette
-- Primary: deep green `#2B4542`
-- Background: cream `#F7F6E8`
-- Accent: light green `#D7F3DC`
-- Primary text: dark green-charcoal `#1D2B2A`
-- Muted text: green-gray tuned for readable contrast
+- Primary: medical blue `#1E4FA6`
+- Background: cool white `#F6F9FC` with a soft white-to-blue gradient
+- Secondary surface: pale blue `#E6EFFF`
+- Accent: cool cyan `#CFE6F7`
+- Primary text: navy-charcoal `#0F1E33`
+- Muted text: slate `#52607A` tuned for readable contrast on cool surfaces
 
 ### Typography
 - Headings: `Lora`

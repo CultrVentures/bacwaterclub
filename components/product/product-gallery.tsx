@@ -16,7 +16,7 @@ export function ProductGallery({ images, alt }: ProductGalleryProps) {
 
   return (
     <div className="flex flex-col gap-5">
-      <div className="relative aspect-square w-full overflow-hidden rounded-[var(--radius-lg)] border border-border/60 bg-white/70 shadow-[var(--shadow-soft)]">
+      <div className="relative aspect-square w-full overflow-hidden rounded-[var(--radius-lg)] border border-border/60 bg-white/85 shadow-[var(--shadow-soft)]">
         <Image
           key={activeImage}
           src={activeImage}
@@ -39,7 +39,7 @@ export function ProductGallery({ images, alt }: ProductGalleryProps) {
                   aria-label={`Show image ${index + 1}`}
                   aria-pressed={isActive}
                   className={cn(
-                    "focus-outline relative block aspect-square w-full overflow-hidden rounded-2xl border bg-white/70 transition-all duration-200",
+                    "focus-outline relative block aspect-square w-full overflow-hidden rounded-2xl border bg-white/80 transition-all duration-200",
                     isActive
                       ? "border-primary ring-2 ring-primary/40"
                       : "border-border/60 hover:border-primary/60",

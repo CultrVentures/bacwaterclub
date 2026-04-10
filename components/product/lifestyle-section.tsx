@@ -6,11 +6,11 @@ export function LifestyleSection() {
   return (
     <section className="section-spacing">
       <div className="container-shell">
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
           {PRODUCT.lifestyleImages.map((src, index) => (
             <div
               key={src}
-              className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-lg)] border border-border/60 bg-white/70 shadow-[var(--shadow-soft)]"
+              className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-lg)] border border-border/60 bg-white/75 shadow-[var(--shadow-soft)]"
             >
               <Image
                 src={src}

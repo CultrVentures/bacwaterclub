@@ -17,14 +17,14 @@ export default function CheckoutCancelPage() {
       <SiteHeader />
       <main id="main-content" className="section-spacing">
         <div className="container-shell max-w-2xl">
-          <div className="rounded-[var(--radius-lg)] border border-border/60 bg-white/80 p-10 shadow-[var(--shadow-card)]">
-            <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
+          <div className="rounded-[var(--radius-lg)] border border-border/60 bg-white/90 p-10 shadow-[var(--shadow-card)] sm:p-12">
+            <p className="text-xs uppercase tracking-[0.22em] text-primary">
               Checkout cancelled
             </p>
-            <h1 className="serif-heading mt-3 text-4xl text-foreground">
+            <h1 className="serif-heading mt-4 text-4xl text-foreground sm:text-[2.75rem]">
               No problem — nothing was charged.
             </h1>
-            <p className="mt-4 text-base leading-7 text-muted-foreground">
+            <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
               You exited the checkout before finishing, so no payment was taken. Your cart is still
               waiting whenever you&apos;re ready.
             </p>

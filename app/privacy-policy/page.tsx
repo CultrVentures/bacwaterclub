@@ -1,24 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { AudienceBar } from "@/components/landing/audience-bar";
 import { SiteFooter } from "@/components/landing/site-footer";
+import { SiteHeader } from "@/components/landing/site-header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy and data handling overview for clinician lead submissions.",
+  description: "Privacy and data handling overview for Bacwaterclub.com customers.",
 };
 
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <AudienceBar />
+      <SiteHeader />
       <main className="section-spacing">
         <div className="container-shell space-y-8">
           <Button asChild variant="outline">
-            <Link href="/">Return to homepage</Link>
+            <Link href="/">Return to the store</Link>
           </Button>
 
           <Card className="bg-white/84">
@@ -27,17 +27,19 @@ export default function PrivacyPolicyPage() {
             </CardHeader>
             <CardContent className="space-y-6 text-sm leading-7 text-muted-foreground">
               <p>
-                This scaffold collects professional contact, practice, and attribution information
-                strictly for pricing, documentation, and account-request review.
+                Bacwaterclub collects the information you provide at checkout — name, shipping
+                address, email, and payment details — solely to fulfill your order and communicate
+                about it. Payment information is handled directly by Stripe; we never store card
+                numbers on our servers.
               </p>
               <p>
-                Submitted information may be routed to CRM, notification, email, and storage
-                systems configured by the operator of this site. Final production deployments should
-                update this page with legal-approved privacy language before launch.
+                Order and contact details may be shared with shipping carriers, our payment
+                processor, and email delivery providers as strictly necessary to complete your
+                order. We do not sell customer data.
               </p>
               <p>
-                Do not use placeholder policy copy in production without review by legal, privacy,
-                and compliance stakeholders.
+                This is placeholder copy. Before public launch, replace this page with privacy
+                language reviewed by qualified legal counsel.
               </p>
             </CardContent>
           </Card>

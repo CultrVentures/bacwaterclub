@@ -3,8 +3,8 @@ import Link from "next/link";
 const footerLinks = [
   { href: "/privacy-policy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms" },
-  { href: "/#lead-form", label: "Request Support" },
-  { href: "/#documentation", label: "Documentation" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/#buy", label: "Shop" },
 ];
 
 export function SiteFooter() {
@@ -12,11 +12,10 @@ export function SiteFooter() {
     <footer className="border-t border-border/70 bg-white/45">
       <div className="container-shell flex flex-col gap-8 py-10 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-2xl space-y-3">
-          <p className="serif-heading text-2xl text-foreground">CULTR Health</p>
+          <p className="serif-heading text-2xl text-foreground">Bacwaterclub</p>
           <p className="text-sm leading-7 text-muted-foreground">
-            Intended for healthcare professionals and authorized purchasers only. This site
-            supports verified pricing requests, documentation follow-up, and professional account
-            review.
+            Premium bacteriostatic water in sealed borosilicate glass vials, made in a GMP-certified
+            USA facility. Sold for research and laboratory use only. Not for human consumption.
           </p>
         </div>
 

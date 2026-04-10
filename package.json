@@ -2,7 +2,7 @@
   "name": "bacwaterclub-com",
   "version": "1.0.0",
   "private": true,
-  "description": "Premium B2B clinician landing page for Hospira Bacteriostatic Water.",
+  "description": "Bacwaterclub.com — direct-to-consumer storefront for premium 30 mL bacteriostatic water vials.",
   "packageManager": "pnpm@10.28.0",
   "scripts": {
     "dev": "next dev",
@@ -36,6 +36,7 @@
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-hook-form": "^7.72.1",
+    "stripe": "^22.0.1",
     "tailwind-merge": "^3.5.0",
     "zod": "^4.3.6"
   },

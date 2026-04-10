@@ -1,24 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { AudienceBar } from "@/components/landing/audience-bar";
 import { SiteFooter } from "@/components/landing/site-footer";
+import { SiteHeader } from "@/components/landing/site-header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "Terms",
-  description: "Professional-use terms placeholder for the clinician landing page scaffold.",
+  description: "Terms of sale and use for Bacwaterclub.com.",
 };
 
 export default function TermsPage() {
   return (
     <>
-      <AudienceBar />
+      <SiteHeader />
       <main className="section-spacing">
         <div className="container-shell space-y-8">
           <Button asChild variant="outline">
-            <Link href="/">Return to homepage</Link>
+            <Link href="/">Return to the store</Link>
           </Button>
 
           <Card className="bg-white/84">
@@ -27,16 +27,18 @@ export default function TermsPage() {
             </CardHeader>
             <CardContent className="space-y-6 text-sm leading-7 text-muted-foreground">
               <p>
-                This scaffold is intended for professional-use inquiry flows, not open retail
-                checkout or consumer purchase behavior.
+                Products sold on Bacwaterclub.com are for research and laboratory use only. They
+                are not drug products and are not intended for use in humans or animals. By placing
+                an order you acknowledge this and confirm you are using the product accordingly.
               </p>
               <p>
-                Access to pricing, availability, documentation, and ordering support is subject to
-                verification, eligibility, and the policies of the site operator.
+                All sales are final once an order has shipped, except in the case of damage in
+                transit, which is covered by our replace-on-arrival guarantee when shipping
+                protection is purchased.
               </p>
               <p>
-                Final production terms should be reviewed and replaced with approved legal copy
-                before launch.
+                This is placeholder copy. Before public launch, replace this page with terms
+                reviewed by qualified legal counsel.
               </p>
             </CardContent>
           </Card>

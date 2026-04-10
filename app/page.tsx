@@ -1,57 +1,68 @@
-import { AudienceBar } from "@/components/landing/audience-bar";
-import { AudienceGridSection } from "@/components/landing/audience-grid-section";
-import { DocumentationSection } from "@/components/landing/documentation-section";
-import { FaqSection } from "@/components/landing/faq-section";
-import { FinalCtaSection } from "@/components/landing/final-cta-section";
-import { HeroSection } from "@/components/landing/hero-section";
-import { LeadCaptureSection } from "@/components/landing/lead-capture-section";
-import { PageViewTracker } from "@/components/landing/page-view-tracker";
+import { ProductFaqSection } from "@/components/product/faq-section";
+import { LifestyleSection } from "@/components/product/lifestyle-section";
+import { ProductHero } from "@/components/product/product-hero";
+import { ProductSpecs } from "@/components/product/product-specs";
+import { ReviewsSection } from "@/components/product/reviews-section";
+import { TrustBadges } from "@/components/product/trust-badges";
 import { SiteFooter } from "@/components/landing/site-footer";
 import { SiteHeader } from "@/components/landing/site-header";
-import { TrustCardsSection } from "@/components/landing/trust-cards-section";
-import { WorkflowStepsSection } from "@/components/landing/workflow-steps-section";
+import { PRODUCT, formatPriceCents } from "@/lib/product";
 
-const structuredData = {
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://bacwaterclub.com";
+
+const productStructuredData = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "Hospira Bacteriostatic Water for Injection for Clinical Buyers",
-  description:
-    "Professional pricing, availability, and account-request landing page for qualified clinicians and authorized healthcare purchasers.",
-  audience: {
-    "@type": "Audience",
-    audienceType: "Healthcare professionals and authorized purchasers",
-    geographicArea: "United States",
+  "@type": "Product",
+  name: PRODUCT.name,
+  description: PRODUCT.shortDescription,
+  brand: { "@type": "Brand", name: "Bacwaterclub" },
+  image: PRODUCT.gallery.map((src) => `${siteUrl}${src}`),
+  sku: PRODUCT.variants[0].sku,
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: PRODUCT.reviewsSummary.rating,
+    reviewCount: PRODUCT.reviewsSummary.count,
   },
-  publisher: {
-    "@type": "Organization",
-    name: "CULTR Health",
-  },
+  offers: PRODUCT.variants.map((variant) => ({
+    "@type": "Offer",
+    sku: variant.sku,
+    name: `${PRODUCT.name} — ${variant.label}`,
+    price: (variant.priceCents / 100).toFixed(2),
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    url: `${siteUrl}/#buy`,
+    itemCondition: "https://schema.org/NewCondition",
+    ...(variant.compareAtCents
+      ? { priceSpecification: { "@type": "PriceSpecification", price: (variant.compareAtCents / 100).toFixed(2), priceCurrency: "USD" } }
+      : {}),
+  })),
 };
 
 export default function HomePage() {
   return (
     <>
-      <PageViewTracker eventName="landing_page_view" />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productStructuredData) }}
       />
 
-      <AudienceBar />
       <SiteHeader />
 
       <main id="main-content">
-        <HeroSection />
-        <TrustCardsSection />
-        <AudienceGridSection />
-        <WorkflowStepsSection />
-        <LeadCaptureSection />
-        <DocumentationSection />
-        <FaqSection />
-        <FinalCtaSection />
+        <ProductHero />
+        <ProductSpecs />
+        <LifestyleSection />
+        <TrustBadges />
+        <ReviewsSection />
+        <ProductFaqSection />
       </main>
 
       <SiteFooter />
     </>
   );
 }
+
+// Re-export for any external callers — product price is derived, not hardcoded here.
+export const _productStartingPrice = formatPriceCents(
+  Math.min(...PRODUCT.variants.map((v) => v.priceCents)),
+);

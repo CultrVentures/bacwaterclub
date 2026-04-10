@@ -1,4 +1,36 @@
-# Hospira Clinician Landing Page
+# Bacwaterclub.com
+
+> **Pivot notice (2026-04-09):** This site was originally scoped as a clinician lead-capture funnel for Hospira Bacteriostatic Water (the PRD below). It has since pivoted to a direct-to-consumer storefront selling Bacwaterclub-branded 30 mL bacteriostatic water vials via Stripe Checkout. The PRD content beyond this banner reflects the **old** product direction and is kept for historical reference. Treat the live source code (`app/`, `components/product/`, `lib/product.ts`, `lib/stripe.ts`) as the source of truth.
+
+## Quickstart
+
+```bash
+pnpm install
+pnpm dev
+```
+
+## Required environment variables
+
+Add these to `.env.local`:
+
+```bash
+STRIPE_SECRET_KEY=sk_test_...           # Stripe API secret (test mode for dev)
+NEXT_PUBLIC_SITE_URL=http://localhost:3000  # Used for absolute URLs in checkout success/cancel redirects
+```
+
+## Scripts
+
+| Command | Purpose |
+|---|---|
+| `pnpm dev` | Start the Next.js dev server |
+| `pnpm build` | Production build |
+| `pnpm typecheck` | TypeScript no-emit check |
+| `pnpm lint` | ESLint (`--max-warnings=0`) |
+| `pnpm test:run` | Vitest one-shot |
+
+---
+
+# Original PRD (historical — pre-pivot)
 
 Comprehensive README + PRD
 

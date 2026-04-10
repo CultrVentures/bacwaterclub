@@ -1,27 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f6e8;
-  --foreground: #1d2b2a;
-  --card: rgba(255, 255, 255, 0.76);
-  --card-foreground: #1d2b2a;
+  --background: #f6f9fc;
+  --foreground: #0f1e33;
+  --card: rgba(255, 255, 255, 0.82);
+  --card-foreground: #0f1e33;
   --popover: #ffffff;
-  --popover-foreground: #1d2b2a;
-  --primary: #2b4542;
-  --primary-foreground: #f7f6e8;
-  --secondary: #edf0e5;
-  --secondary-foreground: #2b4542;
-  --muted: #e6ebdf;
-  --muted-foreground: #4b5f5c;
-  --accent: #d7f3dc;
-  --accent-foreground: #20302f;
-  --border: rgba(43, 69, 66, 0.22);
-  --input: rgba(43, 69, 66, 0.28);
-  --ring: rgba(43, 69, 66, 0.45);
-  --destructive: #8c4034;
-  --destructive-foreground: #fdf7f0;
-  --success: #2f6d58;
-  --success-foreground: #eef7f2;
+  --popover-foreground: #0f1e33;
+  --primary: #1e4fa6;
+  --primary-foreground: #ffffff;
+  --secondary: #e6efff;
+  --secondary-foreground: #1e4fa6;
+  --muted: #eef3fa;
+  --muted-foreground: #52607a;
+  --accent: #cfe6f7;
+  --accent-foreground: #0e3a6b;
+  --border: rgba(30, 79, 166, 0.16);
+  --input: rgba(30, 79, 166, 0.22);
+  --ring: rgba(30, 79, 166, 0.4);
+  --destructive: #b42318;
+  --destructive-foreground: #fef3f2;
+  --success: #0f766e;
+  --success-foreground: #ecfdf9;
   --radius: 1.5rem;
 }
 
@@ -53,8 +53,8 @@
   --radius-md: calc(var(--radius) - 0.25rem);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 0.25rem);
-  --shadow-soft: 0 14px 36px rgba(29, 43, 42, 0.08);
-  --shadow-card: 0 28px 90px rgba(29, 43, 42, 0.08);
+  --shadow-soft: 0 14px 36px rgba(15, 30, 51, 0.08);
+  --shadow-card: 0 28px 90px rgba(15, 30, 51, 0.08);
 }
 
 * {
@@ -70,8 +70,8 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, rgba(215, 243, 220, 0.32), transparent 34%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(247, 246, 232, 0.96) 42%, #f7f6e8 100%);
+    radial-gradient(circle at top, rgba(207, 230, 247, 0.4), transparent 38%),
+    linear-gradient(180deg, #ffffff 0%, #f1f6fc 45%, #eaf1fa 100%);
   color: var(--foreground);
   font-family: var(--font-public-sans), Arial, Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
@@ -96,7 +96,7 @@ textarea {
 }
 
 ::selection {
-  background: rgba(43, 69, 66, 0.14);
+  background: rgba(30, 79, 166, 0.14);
 }
 
 .container-shell {
@@ -105,7 +105,11 @@ textarea {
 }
 
 .section-spacing {
-  padding-block: clamp(4rem, 7vw, 7rem);
+  padding-block: clamp(4.5rem, 7.5vw, 7.5rem);
+}
+
+.section-spacing-sm {
+  padding-block: clamp(3rem, 5vw, 5rem);
 }
 
 .serif-heading {
@@ -122,8 +126,8 @@ textarea {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(43, 69, 66, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(43, 69, 66, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(30, 79, 166, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 79, 166, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent 80%);
   opacity: 0.25;

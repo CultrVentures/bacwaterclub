@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Lora, Public_Sans } from "next/font/google";
 import type { ReactNode } from "react";
 
-import { RedditPixel } from "@/components/landing/reddit-pixel";
-
 import "./globals.css";
 
 const lora = Lora({
@@ -18,26 +16,26 @@ const publicSans = Public_Sans({
   variable: "--font-public-sans",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://bacwaterclub.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Hospira Bacteriostatic Water for Injection | Clinician Pricing Requests",
-    template: "%s | CULTR Health",
+    default: "Bacwaterclub — Bacteriostatic Water in 30 mL Glass Vials",
+    template: "%s | Bacwaterclub",
   },
   description:
-    "A professional pathway for licensed clinicians and authorized healthcare purchasers seeking pricing, availability, documentation, and account setup for Hospira Bacteriostatic Water for Injection.",
+    "Premium bacteriostatic water for peptide reconstitution. 0.9% benzyl alcohol in sealed Type I borosilicate glass vials, made in a GMP-certified USA facility. For research and laboratory use only.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Hospira Bacteriostatic Water for Injection for Clinical Buyers",
+    title: "Bacwaterclub — Bacteriostatic Water in 30 mL Glass Vials",
     description:
-      "Professional procurement, verification, and pricing request flow for qualified healthcare purchasers in the United States.",
+      "Sterile 0.9% benzyl alcohol bacteriostatic water in premium 30 mL borosilicate glass vials. Ships in 24 hours from the USA.",
     type: "website",
     url: "/",
-    siteName: "CULTR Health",
+    siteName: "Bacwaterclub",
   },
   robots: {
     index: true,
@@ -56,7 +54,6 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
-        <RedditPixel />
         {children}
       </body>
     </html>

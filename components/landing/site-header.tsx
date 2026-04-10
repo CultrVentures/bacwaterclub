@@ -8,9 +8,8 @@ import { Button } from "@/components/ui/button";
 
 const navItems = [
   { href: "#product", label: "Product" },
-  { href: "#how-it-works", label: "How It Works" },
-  { href: "#documentation", label: "Documentation" },
   { href: "#faq", label: "FAQ" },
+  { href: "#reviews", label: "Reviews" },
 ] as const;
 
 export function SiteHeader() {
@@ -23,15 +22,15 @@ export function SiteHeader() {
           <Link
             href="/"
             className="focus-outline flex items-center gap-3 rounded-full px-1 py-1"
-            aria-label="CULTR Health home"
+            aria-label="Bacwaterclub home"
           >
             <div className="flex size-11 items-center justify-center rounded-full border border-primary/20 bg-white/70 text-sm font-semibold text-primary">
-              CH
+              BW
             </div>
             <div>
-              <p className="serif-heading text-xl text-foreground">CULTR Health</p>
+              <p className="serif-heading text-xl text-foreground">Bacwaterclub</p>
               <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                Professional sourcing
+                Research-grade bac water
               </p>
             </div>
           </Link>
@@ -50,7 +49,7 @@ export function SiteHeader() {
 
           <div className="flex items-center gap-3">
             <Button asChild size="lg" className="shrink-0">
-              <a href="#lead-form">Request Pricing</a>
+              <a href="#buy">Shop now</a>
             </Button>
             <Button
               type="button"

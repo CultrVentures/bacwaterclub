@@ -1,0 +1,23 @@
+.next
+.vercel
+.data
+coverage
+dist
+node_modules
+*.log
+pnpm-debug.log*
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+
+# Local agent / IDE (not required for the app)
+.agents/
+.claude/
+.cursor/
+
+# TypeScript incremental
+*.tsbuildinfo

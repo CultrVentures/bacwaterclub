@@ -1,0 +1,20 @@
+Hospira Bacteriostatic Water for Injection
+Documentation Preview for Professional Buyers
+
+Intended audience:
+Licensed clinicians, practice administrators, procurement teams, and authorized healthcare purchasers in the United States.
+
+What this file is:
+This preview supports the landing-page documentation workflow during development and preview deployment. It is designed to represent the kind of professional-use documentation a qualified buyer may request before pricing, availability, or account follow-up continues.
+
+What this file is not:
+This is not a final approved product insert and should not replace the regulatory, medical, legal, or procurement review required for launch.
+
+Production replacement before launch:
+- Approved product insert or documentation PDF
+- Final legal and regulatory review
+- Branded metadata, versioning, and document owner details
+- Verified live asset URL used by the documentation workflow
+
+Launch note:
+Replace this preview asset with the final approved document before directing live traffic to the page.
